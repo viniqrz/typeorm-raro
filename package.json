@@ -6,8 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts",
     "test": "jest",
-    "start": "ts-node src/app.ts",
     "test:watch": "jest --watchAll ",
     "test:coverage": "jest --coverage ",
     "typeorm": "ts-node ./node_modules/.bin/typeorm"
