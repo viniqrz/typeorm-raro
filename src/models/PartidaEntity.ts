@@ -42,7 +42,7 @@ export class Partida {
   @Column({ nullable: false })
   dataRealizacao: Date;
 
-  @ManyToOne(() => Rodada, (rodada) => rodada.partidas, { cascade: true })
+  @ManyToOne(() => Rodada, (rodada) => rodada.partidas)
   rodada: Rodada;
 
   @OneToMany(() => Aposta, (aposta) => aposta.partida, { cascade: true })

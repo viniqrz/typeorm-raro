@@ -11,7 +11,9 @@
     "test": "jest",
     "test:watch": "jest --watchAll ",
     "test:coverage": "jest --coverage ",
-    "typeorm": "ts-node ./node_modules/.bin/typeorm"
+    "typeorm": "ts-node ./node_modules/.bin/typeorm",
+    "orm:generate": "ts-node ./node_modules/typeorm/cli migration:generate -n",
+    "orm": "ts-node ./node_modules/typeorm/cli"
   },
   "author": "pauloFernandes",
   "license": "ISC",
@@ -34,6 +36,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
+    "tsconfig-paths": "^3.11.0",
     "typeorm": "^0.2.38"
   }
 }

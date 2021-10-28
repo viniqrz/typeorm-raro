@@ -32,7 +32,7 @@ export class Campeonato {
   @Column()
   idCampeonatoApiExterna: number;
 
-  @ManyToMany((type) => Usuario, { cascade: true })
+  @ManyToMany((type) => Usuario)
   @JoinTable()
   usuarios: Usuario[];
 

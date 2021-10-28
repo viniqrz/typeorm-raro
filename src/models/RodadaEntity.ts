@@ -21,15 +21,13 @@ export class Rodada {
   @Column({ nullable: false, length: 50 })
   slug: string;
 
-  @Column({ nullable: false, length: 50 })
+  @Column({ nullable: false })
   rodada: number;
 
   @Column({ nullable: false, length: 50 })
   status: string;
 
-  @ManyToOne(() => Campeonato, (campeonato) => campeonato.rodadas, {
-    cascade: true,
-  })
+  @ManyToOne(() => Campeonato, (campeonato) => campeonato.rodadas)
   campeonato: Campeonato;
 
   @OneToMany(() => Partida, (partida) => partida.rodada, { cascade: true })

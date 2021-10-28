@@ -1,4 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  JoinColumn,
+  Column,
+  OneToOne,
+} from 'typeorm';
+import { Usuario } from './UsuarioEntity';
 
 @Entity()
 export class Endereco {
@@ -22,4 +29,8 @@ export class Endereco {
 
   @Column({ nullable: false, length: 50 })
   estado: string;
+
+  @OneToOne(() => Usuario, (usuario) => usuario.endereco)
+  @JoinColumn()
+  usuario: Usuario;
 }
